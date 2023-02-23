@@ -1,3 +1,3 @@
 export default function min() {
-  return Math.min(...arguments);
+  return [...arguments].sort()[0];
 }
