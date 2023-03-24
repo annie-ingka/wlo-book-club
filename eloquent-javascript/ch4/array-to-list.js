@@ -1,14 +1,9 @@
 function arrayToList(array) {
   const value = array.shift();
-  return array.length === 0
-    ? {
-        value,
-        rest: null
-      }
-    : {
-        value,
-        rest: arrayToList(array)
-      };
+  return {
+    value,
+    rest: array.length === 0 ? null : arrayToList(array)
+  };
 }
 
 export default arrayToList;
